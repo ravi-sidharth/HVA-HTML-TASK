@@ -422,8 +422,112 @@ print(max_count)
 
 
 
+Answer to the question number 16:
+
+Reverse an Array
+You are given an array of integers. Create a new array with elements in reverse order. Print the new array.
+
+Sample Input
+11 1 13 21 3 7
+
+Sample Output
+7 3 21 13 1 11
 
 
+array = list(map(int, input().split()))
+
+new_array = [0]*len(array) 
+
+i=len(array)-1
+j=0
+while i>=0 :
+  new_array[j]=array[i]
+  j+=1
+  i-=1
+
+
+j=0
+while j<len(new_array): 
+  print(new_array[j],end=" ")
+  j+=1
+  
+  
+  
+  
+Answer to the question number 17:
+
+Check Array for Palimdrome
+You are given an array of integers. Check if the given array is a Palindrome. If it is a Palindrome array, print yes, else print no.
+
+Note: A Palindrome Array is when the reverse of the array is the same as the original array.
+
+Sample Input 1
+11 1 13 21 3 7
+Sample Output 1
+No
+Sample Input 2
+17 1 13 1 17
+Sample Output 2
+Yes
+Explanation: The reverse of the array reads same as the original array.
+
+array = list(map(int, input().split()))
+
+i=0
+n=len(array)-1
+palindrome =True
+while i<=n/2:
+  if array[i]==array[n]:
+    i+=1
+    n-=1
+    continue 
+  else:
+    print("No")
+    palindrome=False
+    break
+
+if palindrome is True:
+ print("Yes")
+ 
+ 
+ Answer to the question number 18:
+ 
+Maximum Frequency in an Array
+You are given an array of integers. Find the element that appears the maximum number of times in an array. If multiple elements appear maximum number of times, you have to print the element which occurs first.
+
+Sample Input
+5 4 7 11 8 4 6 11 9
+Sample Output
+4
+Explanation: Both 4 and 11 appear 2 times. We can print any of 4 and 11, so we print 4.
+
+
+array =list(map(int,input().split()))
+
+i=0
+count=0
+max=0
+frequency=0
+while i < len(array):
+	j=i 
+	while j < len(array):
+	
+		if array[i]==0:
+			break
+		if array[i] == array[j]:
+			array[j]=0
+			count=+1
+		j+=1
+	print(array)
+	if max > count:
+		max=count
+		frequency=array[i]
+	print(max)
+	print(frequency)
+	i+=1
+	
+			
+			
 
 
 
